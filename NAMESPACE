@@ -1,12 +1,1 @@
-export(APIStore.init)
-export(APIStore)
-export(information)
-export(Puzzle)
-importFrom(XML,"htmlParse")
-importFrom(XML,"xmlRoot")
-importFrom(XML,"xpathSApply")
-importFrom(XML,"xmlValue")
-importFrom(XML,"readHTMLTable")
-importFrom(rjson,"fromJSON")
-
-
+exportPattern("^[^\\.]")
