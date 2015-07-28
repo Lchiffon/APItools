@@ -15,6 +15,9 @@
 ##' function440()
 
 
+
+
+
 APIStore = function(URL,apinum = 1){
   
   ## Test apikey
@@ -23,6 +26,11 @@ APIStore = function(URL,apinum = 1){
     stop("apikey haven't set!\nUse APIstore.api.init() to set it! ")
   }
   
+  
+  if(!require(RCurl)){
+    install_packages("RCurl")
+    require(RCurl)
+  }
   
   
   ## Get URL
@@ -33,7 +41,7 @@ APIStore = function(URL,apinum = 1){
                   "/apiworks/servicedetail/",URL,".html")
   }
   ## Test URL Exist
-  if(!RCurl::url.exists(apiURL)){
+  if(!url.exists(apiURL)){
     stop("This API does not exist!")
   }
   
@@ -97,10 +105,10 @@ url = 'APILinkData'
 finalurl = paste0(url,'?',
 paraPart2Data
 )
-curl = RCurl::getCurlHandle()
-RCurl::curlSetOpt( .opts = list(httpheader = c(apikey = 'apikeyData')),
+curl = getCurlHandle()
+curlSetOpt( .opts = list(httpheader = c(apikey = 'apikeyData')),
 curl = curl)
-ans = RCurl::getURL(finalurl, curl = curl)
+ans = getURL(finalurl, curl = curl)
 if(length(grep(',',ans))==1){
 ans = rjson::fromJSON(ans)
 }
