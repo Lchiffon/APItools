@@ -1,0 +1,12 @@
+Package: APItools
+Title: API tools for R users
+Version: 0.1
+Authors@R:  "Dawei Lang <dawei.lang@supstat.com> [aut, cre]"
+Description: API tools provide a method to get API in an easier way, including creating API function, manipulating data and so on.
+Depends: R (>= 3.0.0)
+License: MIT
+LazyData: true
+Imports:
+    XML,
+    rjson,
+    RCurl
