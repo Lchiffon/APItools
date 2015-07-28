@@ -8,5 +8,4 @@ License: MIT
 LazyData: true
 Imports:
     XML,
-    rjson,
-    RCurl
+    rjson
