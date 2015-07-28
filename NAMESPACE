@@ -1,4 +1,3 @@
-exportPattern("^[^\\.]")
 export(APIStore.init)
 export(APIStore)
 export(information)
