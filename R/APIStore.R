@@ -18,7 +18,7 @@
 APIStore = function(URL,apinum = 1){
   
   ## Test apikey
-  if(!"APIstore.api" %in% ls()){
+  if(!"APIstore.api" %in% ls(.GlobalEnv)){
     help("APIstore.api.init")
     stop("apikey haven't set!\nUse APIstore.api.init() to set it! ")
   }
